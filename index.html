@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./script.js" defer></script>
     <title>etch sketch</title>
 </head>
+
 <body>
+    <div class="header">
+        <h1 class="title"></h1>
+        <div class="container-input">
+            <div class="input-slider">
+                <value></value>
+                <input class="slider" type="range" name="slider" value="50" min="1" max="100">
+            </div>
+            <div class="input-size">
+                <input class="input" type="number" name="size-canvas" placeholder="num">
+                <button class="submit">enter</button>
+            </div>
+        </div>
+    </div>
     <div class="container"></div>
 </body>
+
 </html>
