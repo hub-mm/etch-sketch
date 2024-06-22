@@ -4,6 +4,7 @@ body.style.maxWidth = '960px';
 body.style.backgroundColor = 'white';
 body.style.display = 'flex';
 body.style.flexDirection = 'column';
+body.style.fontFamily = '"Playwrite NG Modern", cursive';
 
 const header = document.querySelector('.header');
 header.style.height = '4vh';
@@ -36,12 +37,14 @@ darkBtn.addEventListener('click', () => {
     if (body.style.backgroundColor === 'white') {
         body.style.backgroundColor = 'black';
         body.style.color = 'white';
+        darkBtn.style.border = 'solid white 1px';
         header.style.borderBottom = 'solid white 1px';
         colorDiv = 'solid white 1px';
         getCanvas(colorDiv);
     } else if (body.style.backgroundColor === 'black') {
         body.style.backgroundColor = 'white';
         body.style.color = 'black';
+        darkBtn.style.border = 'solid black 1px';
         header.style.borderBottom = 'solid black 1px';
         colorDiv = 'solid black 1px';
         getCanvas(colorDiv);
