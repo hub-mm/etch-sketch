@@ -39,12 +39,14 @@ darkBtn.addEventListener('click', () => {
         body.style.color = 'white';
         darkBtn.style.border = 'solid white 1px';
         header.style.borderBottom = 'solid white 1px';
+        darkBtn.style.background = 'linear-gradient(to left, #ffffff 50%, #000000 50%)';
         colorDiv = 'solid white 1px';
         getCanvas(colorDiv);
     } else if (body.style.backgroundColor === 'black') {
         body.style.backgroundColor = 'white';
         body.style.color = 'black';
         darkBtn.style.border = 'solid black 1px';
+        darkBtn.style.background = 'linear-gradient(to left, #000000 50%, #ffffff 50%)';
         header.style.borderBottom = 'solid black 1px';
         colorDiv = 'solid black 1px';
         getCanvas(colorDiv);
