@@ -19,7 +19,17 @@ title.textContent = 'painterSqR';
 
 const sizeInput = document.querySelector('.container-input');
 sizeInput.style.display = 'flex';
+sizeInput.style.alignItems = 'center';
+sizeInput.style.justifyContent = 'space-between';
 sizeInput.style.gap = '24px';
+
+
+const darkBtn = document.querySelector('.dark-button');
+darkBtn.style.height = '25px';
+darkBtn.style.width = '25px';
+darkBtn.style.borderRadius = '50%';
+darkBtn.style.backgroundColor = 'linear-gradient(#000000 50%, #ffffff 50%)';
+
 
 const inputSlider = document.querySelector('.input-slider');
 inputSlider.style.display = 'flex';
@@ -45,8 +55,9 @@ const container = document.querySelector('.container');
 container.style.height = '96vh';
 container.style.width = '100%';
 container.style.display = 'flex';
-container.style.justifyContent = 'center'
-container.style.gap = '1px'
+container.style.justifyContent = 'center';
+container.style.gap = '1px';
+container.style.transition = 'all 2s';
 
 let sizeOfCanvas = 16;
 
@@ -85,13 +96,22 @@ function getCanvas() {
             div.style.height = `${sliderValue}px`;
             div.style.width = `${sliderValue}px`;
             div.style.transition = `all 0.25s`;
+            div.style.cursor = 'round'
             row.appendChild(div);
 
 
+            const colorInput = document.querySelector('.color-pick');
+            let colorDraw = '#000000';
+            console.log(colorDraw);
+
+            colorInput.addEventListener('click', () => {
+                colorDraw = colorInput.value;
+            })
+
             div.addEventListener('mouseover', () => {
-                div.style.backgroundColor = 'black';
+                div.style.backgroundColor = `${colorDraw}`;
             })
         }
     }
 }
-getCanvas(sizeOfCanvas)
+getCanvas()
